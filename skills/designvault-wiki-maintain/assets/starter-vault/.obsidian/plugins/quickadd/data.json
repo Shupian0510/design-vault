@@ -1,0 +1,180 @@
+{
+  "choices": [
+    {
+      "id": "wiki-create-group",
+      "name": "新建 Wiki 页面",
+      "type": "Multi",
+      "command": true,
+      "placeholder": "选择要创建的 wiki 页面类型",
+      "choices": [
+        {
+          "id": "wiki-create-system",
+          "name": "新建系统综述",
+          "type": "Template",
+          "command": true,
+          "templatePath": "_Templates/System Template.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "系统 - {{VALUE:pageName|label:系统名称}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "00 Wiki/Concepts"
+            ]
+          },
+          "setFileExistsBehavior": true,
+          "fileExistsMode": "Nothing"
+        },
+        {
+          "id": "wiki-create-concept",
+          "name": "新建概念页",
+          "type": "Template",
+          "command": true,
+          "templatePath": "_Templates/Concept Template.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "概念 - {{VALUE:pageName|label:概念名称}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "00 Wiki/Concepts"
+            ]
+          },
+          "setFileExistsBehavior": true,
+          "fileExistsMode": "Nothing"
+        },
+        {
+          "id": "wiki-create-rule",
+          "name": "新建规则页",
+          "type": "Template",
+          "command": true,
+          "templatePath": "_Templates/Rule Template.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "规则 - {{VALUE:pageName|label:规则名称}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "00 Wiki/Rules"
+            ]
+          },
+          "setFileExistsBehavior": true,
+          "fileExistsMode": "Nothing"
+        },
+        {
+          "id": "wiki-create-surface",
+          "name": "新建界面页",
+          "type": "Template",
+          "command": true,
+          "templatePath": "_Templates/Surface Template.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "界面 - {{VALUE:pageName|label:界面名称}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "00 Wiki/Surfaces"
+            ]
+          },
+          "setFileExistsBehavior": true,
+          "fileExistsMode": "Nothing"
+        }
+      ]
+    },
+    {
+      "id": "studio-create-group",
+      "name": "新建 Studio 页面",
+      "type": "Multi",
+      "command": true,
+      "placeholder": "选择要创建的 studio 页面类型",
+      "choices": [
+        {
+          "id": "studio-create-longform",
+          "name": "新建设计长稿",
+          "type": "Template",
+          "command": true,
+          "templatePath": "_Templates/Longform Design Draft Template.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "长稿 - {{VALUE:pageName|label:长稿名称}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "10 Studio/Todo - Design/Longform"
+            ]
+          },
+          "setFileExistsBehavior": true,
+          "fileExistsMode": "Nothing"
+        },
+        {
+          "id": "studio-create-execution-plan",
+          "name": "新建 Execution Plan",
+          "type": "Template",
+          "command": true,
+          "templatePath": "_Templates/Plan Template.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "计划 - {{VALUE:pageName|label:计划名称}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "10 Studio/Execution Plans"
+            ]
+          },
+          "setFileExistsBehavior": true,
+          "fileExistsMode": "Nothing"
+        },
+        {
+          "id": "studio-create-execution-log",
+          "name": "新建 Execution Log",
+          "type": "Template",
+          "command": true,
+          "templatePath": "_Templates/Execution Log Template.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "执行记录 - {{VALUE:pageName|label:执行记录名称}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "10 Studio/Execution Logs"
+            ]
+          },
+          "setFileExistsBehavior": true,
+          "fileExistsMode": "Nothing"
+        },
+        {
+          "id": "studio-create-change-review",
+          "name": "新建 Change Review",
+          "type": "Template",
+          "command": true,
+          "templatePath": "_Templates/Change Review Template.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "变更 - {{VALUE:pageName|label:变更名称}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "10 Studio/Change Review"
+            ]
+          },
+          "setFileExistsBehavior": true,
+          "fileExistsMode": "Nothing"
+        }
+      ]
+    }
+  ],
+  "inputPrompt": "single-line",
+  "persistInputPromptDrafts": true,
+  "useSelectionAsCaptureValue": true,
+  "templateFolderPath": "_Templates",
+  "version": "2.12.0",
+  "disableOnlineFeatures": true
+}

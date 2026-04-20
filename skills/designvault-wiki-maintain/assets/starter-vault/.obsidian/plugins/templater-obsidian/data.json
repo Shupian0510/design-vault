@@ -1,0 +1,69 @@
+{
+  "templates_folder": "_Templates",
+  "trigger_on_file_creation": true,
+  "auto_jump_to_cursor": true,
+  "enable_folder_templates": true,
+  "folder_templates": [
+    {
+      "folder": "00 Wiki/Concepts",
+      "template": "_Templates/Concept Template.md"
+    },
+    {
+      "folder": "00 Wiki/Rules",
+      "template": "_Templates/Rule Template.md"
+    },
+    {
+      "folder": "00 Wiki/Surfaces",
+      "template": "_Templates/Surface Template.md"
+    },
+    {
+      "folder": "10 Studio/Idea List",
+      "template": "_Templates/Idea Template.md"
+    },
+    {
+      "folder": "10 Studio/Todo - Design/Longform",
+      "template": "_Templates/Longform Design Draft Template.md"
+    },
+    {
+      "folder": "10 Studio/Execution Plans",
+      "template": "_Templates/Plan Template.md"
+    },
+    {
+      "folder": "10 Studio/Execution Logs",
+      "template": "_Templates/Execution Log Template.md"
+    },
+    {
+      "folder": "10 Studio/Todo - Personal",
+      "template": "_Templates/Personal Todo Template.md"
+    },
+    {
+      "folder": "10 Studio/Todo - Design",
+      "template": "_Templates/Design Todo Template.md"
+    },
+    {
+      "folder": "10 Studio/Todo - Programming",
+      "template": "_Templates/Programming Todo Template.md"
+    },
+    {
+      "folder": "10 Studio/Todo - Art",
+      "template": "_Templates/Art Todo Template.md"
+    },
+    {
+      "folder": "10 Studio/Change Review",
+      "template": "_Templates/Change Review Template.md"
+    },
+    {
+      "folder": "10 Studio/Brainstorming",
+      "template": "_Templates/Brainstorming Template.md"
+    }
+  ],
+  "enable_file_templates": false,
+  "file_templates": [],
+  "startup_templates": [],
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
+  "intellisense_render": 1,
+  "enable_system_commands": false,
+  "user_scripts_folder": "",
+  "templates_pairs": []
+}

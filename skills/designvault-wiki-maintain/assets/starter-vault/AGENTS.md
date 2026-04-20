@@ -26,6 +26,12 @@ This vault separates stable truth from active working material.
 - `index.md`
 - `_Templates/`
 - `10 Studio/Workflow.md`
+- `10 Studio/Obsidian Tooling.md`
+- `10 Studio/完整使用手册.md`
+- `10 Studio/目标工作流 - 三入口自动执行工作流.md`
+- `10 Studio/规范 - Decision Packet.md`
+- `10 Studio/规范 - Repair Loop.md`
+- `10 Studio/规范 - Dashboard 信息架构.md`
 - `10 Studio/规范 - Design 产物与交接.md`
 - `10 Studio/规范 - Bug 产物与交接.md`
 - `10 Studio/规范 - Wiki 回写与状态建议.md`

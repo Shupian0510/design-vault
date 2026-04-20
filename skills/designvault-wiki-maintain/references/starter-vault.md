@@ -8,12 +8,14 @@ The packaged starter vault is a minimal public template, not a project truth dum
 - starter navigation pages
 - templates copied from the original internal vault
 - a few sample pages that demonstrate the artifact contracts
+- a public-safe `.obsidian/` bootstrap with plugin lists plus QuickAdd and Templater config
 
 ## Excluded
 
 - private or project-specific truth pages
 - live execution plans and logs from the source project
-- user-state Obsidian workspace files
+- installed community-plugin binaries
+- personal workspace state that is specific to one operator machine
 
 ## Expected Customization
 

@@ -8,7 +8,7 @@
 
 ### 这是什么
 
-`designvault-skills` 是我从 `AgentMarket` 项目里抽出来的一套可复用工作流骨架。
+`designvault-skills` 是从 `AgentMarket` 工作流中提炼出的可复用公开骨架。
 
 它的目标不是导出某个项目的私有设计文档，而是把一套稳定的方法论公开出来：
 
@@ -115,74 +115,6 @@
 
 ---
 
-### 与 AgentMarket 的完整性对比结论
-
-以下结论基于我对本仓库和 `AgentMarket` 中 `Docs/DesignVault`、`tools/design_ops`、`.codex/agents` 的对比。
-
-#### 结论 1
-
-这个仓库 **已经包含了公开版核心功能骨架**，但 **不是 AgentMarket 的完整一比一环境镜像**。
-
-更准确地说：
-
-- `designvault` 的核心 lane、starter vault、execute 编排脚本、可选 subagent 模板都在
-- 它们是“可公开复用版”，不是和 AgentMarket 完全逐字节相同的私有原件
-- starter vault 在当前仓库内跑 `wiki_lint` 已通过：`issues 0 / warnings 0`
-
-#### 结论 2
-
-如果你的目标是：
-
-- 在 `Codex + skills + starter vault` 下跑通公开版 `/design -> /execute -> /bug`
-
-那么这套仓库 **基本够用**。
-
-如果你的目标是：
-
-- 直接零额外配置复现我在 AgentMarket 里的“完整人机协作环境”
-
-那么它 **仍然不是完整镜像**，但现在缺的已经主要是私有状态和具体项目内容，不再是公开工作流文件本身。
-
-#### 现在已经补齐的公共环境层文件
-
-- starter vault 的公开版 `.obsidian/` 配置
-  - `app.json`
-  - `appearance.json`
-  - `community-plugins.json`
-  - `core-plugins.json`
-  - `graph.json`
-  - `workspace.json`
-  - QuickAdd / Templater 配置数据
-- `10 Studio/Obsidian Tooling.md`
-- `10 Studio/完整使用手册.md`
-- `10 Studio/目标工作流 - 三入口自动执行工作流.md`
-- `10 Studio/规范 - Decision Packet.md`
-- `10 Studio/规范 - Repair Loop.md`
-- `10 Studio/规范 - Dashboard 信息架构.md`
-- `10 Studio/Dashboards/`
-- `10 Studio/Todo - Personal/`
-- `10 Studio/Decision Log/决策 - 三入口自动执行工作流.md`
-- `./.codex/config.toml`
-- `tools/design_ops/README.md`
-- `tools/design_ops/obsidian_open.ps1`
-
-#### 仍然没有打包的东西
-
-- AgentMarket 项目自己的 live truth pages
-- 真实执行中的 plan / log / dashboard 历史
-- 用户个人 Obsidian 插件二进制与私有工作区状态
-- 具体项目的 Unity 环境、MCP 连接状态、账号和密钥
-
-#### 所以问题 1 的最终答案
-
-- “是否完整包含和 AgentMarket 一样的功能性文件？”
-  - `不是`
-- “是否有跑通全流程所需的一切文件？”
-  - `对公开版 DesignVault 主链路来说，现在基本有`
-  - `对我个人在 AgentMarket 使用的完整环境来说，仍然没有，因为私有项目状态没有公开`
-
----
-
 ### 目录结构
 
 ```text
@@ -205,7 +137,7 @@ skills/
 
 ### 如何在 Codex 中配置
 
-这是我当前主要使用环境，也是这个仓库最直接支持的目标环境。
+这是本仓库最直接支持的目标环境。
 
 #### 1. 安装 skills
 
@@ -265,7 +197,7 @@ pwsh -File `
 #### 5. 推荐最小使用口令
 
 ```text
-/design 这个功能。先 grill 我，把关键设计问题问透，再收敛成长稿和 implementation plan。
+/design 这个功能。先 grill 关键设计问题，再收敛成长稿和 implementation plan。
 ```
 
 ```text
@@ -280,9 +212,9 @@ pwsh -File `
 
 ### 如何配置 Obsidian
 
-当前仓库现在已经给 starter vault 打包了一份**公开版、安全的** `.obsidian/` 配置。
+starter vault 已包含一份**公开版、安全的** `.obsidian/` 配置。
 
-但如果你想真正用起来，仍然要在 Obsidian 里安装这三类社区插件：
+要真正使用这套配置，仍然需要在 Obsidian 里安装这三类社区插件：
 
 - `QuickAdd`
 - `Templater`
@@ -297,7 +229,7 @@ pwsh -File `
 - `Dataview`
   - 负责索引和 dashboard 视图
 
-#### 建议至少补齐的 QuickAdd 命令
+#### 推荐保留的 QuickAdd 命令
 
 - 新建 Wiki 页面
 - 新建设计长稿
@@ -305,7 +237,7 @@ pwsh -File `
 - 新建 Execution Log
 - 新建 Change Review
 
-#### 建议至少补齐的 Templater 目录映射
+#### 推荐的 Templater 目录映射
 
 - `00 Wiki/Concepts/` -> `Concept Template.md`
 - `00 Wiki/Surfaces/` -> `Surface Template.md`
@@ -326,16 +258,16 @@ pwsh -File `
 
 - 把 `Docs/DesignVault/` 作为 Obsidian vault root
 - 把 `_Templates/` 设成模板目录
-- 把插件配置保存在你自己的 `.obsidian/`
+- 把插件私有状态保存在本地 `.obsidian/`
 - 不要把 workspace 状态当成这个公开仓库的一部分
 
 ---
 
 ### 如何配置 Unity MCP
 
-这个仓库不自带 Unity MCP，它默认假设你已经在自己的工具链里安装并能连接 Unity Editor。
+这个仓库不自带 Unity MCP，默认假设目标环境中已经安装并能连接 Unity Editor。
 
-我的使用方式是：
+推荐执行方式：
 
 - Unity 编辑器里的真实执行和验证，优先走 `Unity MCP`
 - `/execute` 的 machine evidence，优先看：
@@ -427,13 +359,13 @@ pwsh -File `
 }
 ```
 
-如果你已经在用 `.claude/skills/` 或 `.agents/skills/`，OpenCode 可以直接发现它们，不一定要复制两遍。
+如果已经在使用 `.claude/skills/` 或 `.agents/skills/`，OpenCode 可以直接发现它们，不一定要复制两遍。
 
 ---
 
 ### 给 AI 助手看的安装提示词
 
-下面这段提示词适合交给 Codex、Claude Code、OpenCode 一类 agent，让它在你的项目里自动完成 DesignVault 初始化。
+下面这段提示词可直接交给 Codex、Claude Code、OpenCode 一类 agent，用于自动初始化 DesignVault 工作流。
 
 ```text
 请把当前项目初始化为 DesignVault 工作流仓库。
@@ -456,7 +388,7 @@ pwsh -File `
 
 交付要求：
 1. 列出你创建或修改的所有配置文件。
-2. 明确说明哪些文件已经自动配置，哪些仍需要人工补齐。
+2. 明确说明哪些文件已经自动配置，哪些仍需人工补齐。
 3. 运行一次 starter vault 的 lint，并报告结果。
 4. 不要修改业务代码；只做 workflow、skills、agents、wiki、automation 相关配置。
 ```
@@ -465,7 +397,7 @@ pwsh -File `
 
 ### 推荐使用环境
 
-这是我当前最接近原始体验的一套组合：
+推荐环境组合：
 
 - `Codex`
   - 负责主线程执行、automation、subagent orchestration、skills
@@ -486,7 +418,7 @@ pwsh -File `
 
 ### What This Repo Is
 
-`designvault-skills` is the reusable public shell of the workflow I developed inside `AgentMarket`.
+`designvault-skills` is the reusable public shell extracted from the workflow used inside `AgentMarket`.
 
 It is built around two ideas:
 
@@ -524,34 +456,6 @@ Default flow:
 - a starter vault
 - deterministic `/execute` helper scripts
 - optional subagent templates
-
-### Completeness vs AgentMarket
-
-This repo is **functionally sufficient for the public Codex-centered workflow**, but it is **not a full environment mirror of AgentMarket**.
-
-Practical conclusion:
-
-- `Yes` for the public core workflow skeleton
-- `No` for full one-to-one parity with my personal AgentMarket environment
-
-What is now included beyond the original minimal public pack:
-
-- a public-safe starter-vault `.obsidian/` config
-- operator-facing docs:
-  - `Obsidian Tooling.md`
-  - the full handbook
-  - the target-state workflow spec
-  - `Decision Packet`, `Repair Loop`, and dashboard-architecture notes
-- a project-level `.codex/config.toml`
-- the `obsidian_open.ps1` helper
-
-What is still not included:
-
-- private project truth
-- live execution history from AgentMarket
-- installed Obsidian plugin binaries and personal workspace state
-
-The packaged starter vault does pass lint in this repo.
 
 ### Codex Setup
 
@@ -650,7 +554,7 @@ Its job is to:
 
 ### Recommended Environment
 
-My closest original setup is:
+Recommended environment:
 
 - `Codex` for orchestration, skills, automation, and subagents
 - `Unity MCP` for Unity execution and evidence

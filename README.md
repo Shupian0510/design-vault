@@ -1,6 +1,16 @@
 # DesignVault Skills
 
-Reusable Codex skill plus starter vault for teams that want a maintained design wiki, a working studio area, and lightweight scripts for search, lint, and writeback support.
+A reusable Codex skill pack for running a DesignVault-style workflow:
+design in wiki truth, execute from implementation plans, repair bugs from observed symptoms, and keep UI work handoff-friendly.
+
+This repo packages:
+
+- focused skills for `/design`, `/execute`, `/bug`, UI handoff, and vault maintenance
+- a starter vault with templates and sample pages
+- deterministic `/execute` orchestration scripts
+- optional child-agent configs for phase execution and acceptance
+
+Use it when you want DesignVault as a reusable method, not as one project's private notes.
 
 ## Skills
 

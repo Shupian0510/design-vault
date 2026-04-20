@@ -1,0 +1,4 @@
+interface:
+  display_name: "DesignVault Maintain"
+  short_description: "Lint, trace, and maintain vault truth"
+  default_prompt: "Use DesignVault Maintain to set up a starter vault, search wiki truth, lint vault health, trace code changes back to wiki pages, and draft writeback artifacts."

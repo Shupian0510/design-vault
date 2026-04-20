@@ -1,0 +1,4 @@
+interface:
+  display_name: "DesignVault Execute"
+  short_description: "Run approved plans to completion"
+  default_prompt: "Use DesignVault Execute to read one approved execution plan, run preflight, execute phases, verify results, and write back changed truth."

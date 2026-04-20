@@ -1,0 +1,4 @@
+interface:
+  display_name: "DesignVault Design"
+  short_description: "Shape design into truth and plans"
+  default_prompt: "Use DesignVault Design to read current wiki truth, grill for missing decisions, and end with updated truth plus one execution plan."

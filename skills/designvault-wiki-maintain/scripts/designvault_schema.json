@@ -1,0 +1,326 @@
+{
+  "managed_by_values": [
+    "ai",
+    "human",
+    "mixed"
+  ],
+  "priority_values": [
+    "human-set"
+  ],
+  "owner_role_values": [
+    "design",
+    "programming",
+    "art"
+  ],
+  "wiki": {
+    "structural_paths": [
+      "00 Wiki/Home.md",
+      "00 Wiki/Indexes/",
+      "00 Wiki/Glossary/"
+    ],
+    "status_values": [
+      "active",
+      "draft",
+      "parked",
+      "archived"
+    ],
+    "page_types": {
+      "system": {
+        "ownership_family": "definition",
+        "required_fields": [
+          "type",
+          "status",
+          "updated",
+          "managed_by",
+          "keywords",
+          "player_questions",
+          "code_refs",
+          "figma_refs",
+          "source_notes",
+          "related"
+        ],
+        "array_fields": [
+          "keywords",
+          "player_questions",
+          "code_refs",
+          "figma_refs",
+          "source_notes",
+          "related"
+        ]
+      },
+      "concept": {
+        "ownership_family": "definition",
+        "required_fields": [
+          "type",
+          "status",
+          "updated",
+          "managed_by",
+          "keywords",
+          "player_questions",
+          "code_refs",
+          "figma_refs",
+          "source_notes",
+          "related"
+        ],
+        "array_fields": [
+          "keywords",
+          "player_questions",
+          "code_refs",
+          "figma_refs",
+          "source_notes",
+          "related"
+        ]
+      },
+      "rule": {
+        "ownership_family": "rule",
+        "required_fields": [
+          "type",
+          "status",
+          "updated",
+          "managed_by",
+          "keywords",
+          "player_questions",
+          "code_refs",
+          "figma_refs",
+          "source_notes",
+          "related"
+        ],
+        "array_fields": [
+          "keywords",
+          "player_questions",
+          "code_refs",
+          "figma_refs",
+          "source_notes",
+          "related"
+        ]
+      },
+      "surface": {
+        "ownership_family": "surface",
+        "required_fields": [
+          "type",
+          "status",
+          "updated",
+          "managed_by",
+          "keywords",
+          "player_questions",
+          "code_refs",
+          "figma_refs",
+          "source_notes",
+          "related"
+        ],
+        "array_fields": [
+          "keywords",
+          "player_questions",
+          "code_refs",
+          "figma_refs",
+          "source_notes",
+          "related"
+        ]
+      }
+    }
+  },
+  "studio": {
+    "tracked_roots": [
+      "10 Studio/Idea List",
+      "10 Studio/Todo - Design",
+      "10 Studio/Todo - Programming",
+      "10 Studio/Todo - Art",
+      "10 Studio/Brainstorming",
+      "10 Studio/Change Review",
+      "10 Studio/Decision Log",
+      "10 Studio/Execution Plans",
+      "10 Studio/Execution Logs"
+    ],
+    "ignored_filenames": [
+      "README.md"
+    ],
+    "ignored_prefixes": [
+      "模板 - "
+    ],
+    "page_types": {
+      "idea": {
+        "required_fields": [
+          "type",
+          "status",
+          "updated",
+          "priority",
+          "links"
+        ],
+        "array_fields": [
+          "links"
+        ],
+        "status_values": [
+          "backlog",
+          "open",
+          "active",
+          "example",
+          "parked",
+          "archived"
+        ]
+      },
+      "todo": {
+        "required_fields": [
+          "type",
+          "status",
+          "updated",
+          "owner_role",
+          "priority",
+          "links"
+        ],
+        "array_fields": [
+          "links"
+        ],
+        "status_values": [
+          "backlog",
+          "open",
+          "blocked",
+          "done",
+          "example",
+          "archived"
+        ]
+      },
+      "design_draft": {
+        "required_fields": [
+          "type",
+          "status",
+          "updated",
+          "managed_by",
+          "links"
+        ],
+        "array_fields": [
+          "links"
+        ],
+        "status_values": [
+          "drafting",
+          "review",
+          "approved",
+          "archived"
+        ]
+      },
+      "source_note": {
+        "required_fields": [
+          "type",
+          "status",
+          "updated",
+          "managed_by",
+          "links"
+        ],
+        "array_fields": [
+          "links"
+        ],
+        "status_values": [
+          "reference",
+          "archived"
+        ]
+      },
+      "brainstorm": {
+        "required_fields": [
+          "type",
+          "status",
+          "updated",
+          "mode",
+          "links",
+          "reference_games"
+        ],
+        "array_fields": [
+          "links",
+          "reference_games"
+        ],
+        "status_values": [
+          "open",
+          "example",
+          "closed",
+          "archived"
+        ],
+        "mode_values": [
+          "divergent",
+          "convergent",
+          "grill"
+        ]
+      },
+      "change_review": {
+        "required_fields": [
+          "type",
+          "status",
+          "updated",
+          "managed_by",
+          "links",
+          "code_refs",
+          "figma_refs"
+        ],
+        "array_fields": [
+          "links",
+          "code_refs",
+          "figma_refs"
+        ],
+        "status_values": [
+          "open",
+          "example",
+          "accepted",
+          "archived"
+        ]
+      },
+      "plan": {
+        "required_fields": [
+          "type",
+          "status",
+          "updated",
+          "source_notes",
+          "related"
+        ],
+        "array_fields": [
+          "source_notes",
+          "related"
+        ],
+        "status_values": [
+          "draft",
+          "active",
+          "done",
+          "archived"
+        ]
+      },
+      "decision": {
+        "required_fields": [
+          "type",
+          "status",
+          "updated",
+          "source_notes",
+          "related"
+        ],
+        "array_fields": [
+          "source_notes",
+          "related"
+        ],
+        "status_values": [
+          "draft",
+          "active",
+          "superseded",
+          "archived"
+        ]
+      },
+      "execution_log": {
+        "required_fields": [
+          "type",
+          "status",
+          "updated",
+          "source_plan",
+          "playtest_focus",
+          "risk_items",
+          "writeback_pages",
+          "related"
+        ],
+        "array_fields": [
+          "playtest_focus",
+          "risk_items",
+          "writeback_pages",
+          "related"
+        ],
+        "status_values": [
+          "active",
+          "done",
+          "archived"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "DesignVault Bug"
+  short_description: "Fix narrow implementation bugs fast"
+  default_prompt: "Use DesignVault Bug to read minimal truth, diagnose a reported symptom, repair the implementation, verify it, and escalate to design only if needed."

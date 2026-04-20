@@ -8,8 +8,11 @@ Reusable Codex skill plus starter vault for teams that want a maintained design 
   - focused `/design` lane
 - `skills/designvault-execute/`
   - focused `/execute` lane
+  - includes deterministic execute orchestration scripts and optional child-agent configs
 - `skills/designvault-bug/`
   - focused `/bug` lane
+- `skills/designvault-ui-handoff/`
+  - UI boundary guidance so implementation stays handoff-friendly
 - `skills/designvault-wiki-maintain/`
   - starter-vault packaging plus maintenance scripts
 
@@ -41,7 +44,67 @@ If `CODEX_HOME` is unset, use:
 Minimal install options:
 
 - Use only `designvault-design`, `designvault-execute`, and `designvault-bug` if your repo already has a vault and you do not need the packaged scripts.
+- Add `designvault-ui-handoff` if the repo has meaningful UI work and you want a clean implementation-versus-style boundary.
 - Add `designvault-wiki-maintain` if you want the starter vault, lint, trace, and writeback scripts.
+
+## Execute Automation
+
+`designvault-execute` now includes:
+
+- `scripts/`
+  - execution-log bootstrap
+  - phase packet extraction
+  - prompt rendering
+  - result normalization
+  - deterministic parent-thread next-step selection
+- `assets/optional-agents/`
+  - example `phase_executor` and `acceptance_executor` configs for repos that want the same child-agent boundary model as the internal workflow
+
+These are optional. The skill still works without custom agents by falling back to built-in agent types.
+
+## Execute Script Examples
+
+Example: bootstrap one execution log, build preflight, and ask the parent-thread helper for the next action.
+
+```powershell
+# Create the execution log for one plan
+python .\skills\designvault-execute\scripts\init_execution_log.py `
+  --workspace . `
+  --vault-root .\Docs\DesignVault `
+  --plan '.\Docs\DesignVault\10 Studio\Execution Plans\计划 - My Task.md' `
+  --json
+
+# Build a preflight payload
+python .\skills\designvault-execute\scripts\build_preflight_result.py `
+  --workspace . `
+  --vault-root .\Docs\DesignVault `
+  --plan '.\Docs\DesignVault\10 Studio\Execution Plans\计划 - My Task.md' `
+  --environment-baseline 'editor ready' `
+  --compile-console-baseline 'clean'
+
+# Ask what the next deterministic parent-thread step should be
+python .\skills\designvault-execute\scripts\prepare_execute_step.py `
+  --workspace . `
+  --vault-root .\Docs\DesignVault `
+  --plan '.\Docs\DesignVault\10 Studio\Execution Plans\计划 - My Task.md' `
+  --include-prompt
+```
+
+If you want custom child agents, copy the optional configs from:
+
+- `skills/designvault-execute/assets/optional-agents/phase-executor.toml`
+- `skills/designvault-execute/assets/optional-agents/acceptance-executor.toml`
+
+If you do not want custom child agents, keep using the built-in fallback path.
+
+## UI Handoff
+
+Use `designvault-ui-handoff` when:
+
+- the plan needs a clean UI logic versus style split
+- the repo will later use Figma or another design pass for polish
+- you want to prevent code from hardcoding the final visual presentation
+- a UI review needs concrete handoff risks instead of generic design advice
 
 ## Starter Vault
 

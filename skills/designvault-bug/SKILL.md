@@ -12,6 +12,7 @@ Use this skill when the starting point is a symptom, not a new feature plan. The
 1. Read `references/workflow.md`.
 2. Read `references/bug.md`.
 3. Read the smallest relevant wiki pages before reading code.
+4. If the bug is likely to stop on a design ambiguity, also read `../designvault-execute/references/decision-packet.md`.
 
 ## Default Flow
 

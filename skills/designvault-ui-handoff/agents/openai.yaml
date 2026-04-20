@@ -1,0 +1,4 @@
+interface:
+  display_name: "DesignVault UI Handoff"
+  short_description: "Plan editable UI implementation boundaries"
+  default_prompt: "Use DesignVault UI Handoff to define which UI behavior belongs in code, which style should stay editable, and how to keep later Figma-driven polish practical."

@@ -28,3 +28,4 @@ Use this skill when the work is still design, not implementation. The goal is to
 - Do not skip questions just because a plausible plan is easy to imagine.
 - Do not bury major ambiguity in longform.
 - Do not let the execution plan become shadow truth.
+- If the task has meaningful UI implementation-boundary risk, use `../designvault-ui-handoff/` before locking the plan.

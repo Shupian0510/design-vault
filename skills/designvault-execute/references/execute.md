@@ -11,6 +11,14 @@ Use `/execute` when design is already locked and one implementation plan is the 
 5. Write back changed truth.
 6. Finish with one execution log and a compact human summary.
 
+## Read When Needed
+
+- For exact log fields and handoff structure, read `execute-contracts.md`.
+- For the deterministic parent-thread loop, read `execute-orchestration.md`.
+- For stop packets, read `decision-packet.md`.
+- For bounded post-acceptance correction, read `repair-loop.md`.
+- For the public operator manual, read `handbook.md`.
+
 ## Preflight Checklist
 
 - linked wiki truth exists

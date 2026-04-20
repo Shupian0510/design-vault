@@ -20,7 +20,7 @@ related: []
 ## Preflight
 
 - wiki / plan 可读性：
-- Unity / Editor 基线：
+- environment / editor 基线：
 - compile / console 基线：
 - 测试入口：
 
